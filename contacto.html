@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet palace</title>
+ 
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <header>
+
+
+      
+        <div class="container">
+           
+             <a href="index.html" id="logo"><img id="logo" src="./img/perro.png"  width="50" height="50"/></a> 
+            <nav>
+               
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html" >Nosotros</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html"class="active">Contacto</a></li>
+                </ul>
+
+            </nav>
+            <span class="burger-ico">&#9776;</span>
+            
+        </div>
+
+    </header>
+    
+    
+    <main>
+
+        <section id="hero">
+            <img src="https://t4.ftcdn.net/jpg/03/74/80/99/240_F_374809973_KJGrJhcbQ8StBnQpCtNzJS7BRNqUSxgc.jpg" alt="imagen banner">
+          
+        <form action="#">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="lastName">Apellido:</label>
+            <input type="text" id="lastName" name="lastName" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">MENSAJE:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer></footer>
+    <script>
+        // Menú Lateral:
+        let nav = document.querySelector('nav');
+        let burguerIco = document.querySelector('.burger-ico');
+        let shadow = document.querySelector('.shadow');
+
+        let menuToggle = () => {
+
+            nav.classList.toggle('show-menu');
+            burguerIco.classList.toggle('burger-active');
+            shadow.classList.toggle('shadow-active');
+
+        };
+
+        burguerIco.addEventListener('click', menuToggle);
+      //  shadow.addEventListener('click', menuToggle);
+
+        // Cambiador de Modo Claro a Oscuro:
+        let darkBtn = document.querySelector('.dark-btn');
+        let body = document.body;
+
+        darkBtn.addEventListener('click', () => {
+
+            body.classList.toggle('dark-mode');
+            darkBtn.classList.toggle('dark-btn-active')
+ 
+        });
+
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet palace</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <header>
+        <div class="shadow"></div>
+        <div class="container">
+            <a href="index.html" id="logo"><img id="logo" src="./img/perro.png"  width="50" height="50"/></a> 
+            
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="acerca.html">Nosotros</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><div class="dark-btn"></div></li>
+                </ul>
+            </nav>
+
+            <span class="burger-ico">&#9776;</span>
+        </div>
+
+    </header>
+    <main>
+        <section id="hero">
+
+            <!--img src="img/foto-hero.jpg" alt=""-->
+            <video height="500px" aria-expanded="true" src="https://v.ftcdn.net/03/98/67/41/700_F_398674151_iTkvza9UDvOITygMZmAxRFK0G4IRkeOI_ST.mp4" autoplay muted loop></video>
+
+                <div class="hero-fill">
+                    <div class="hero-text">
+                        <h1>The pet Palace</h1>
+                        <p>En Pet Palace, amamos a todas las mascotas y nos dedicamos a proporcionar los mejores productos y servicios para nuestros amigos peludos. Ya sea que tengas un perro, un gato, una cobaya o un loro, estamos aquí para ayudarte. </p>
+                        <a href="acerca.html"><button class="btn btn-blanco">Más info</button></a>
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="colums container">
+            <article2>
+
+                <span class="ipco"> <span class="ico"><img src="./img/conejo.png" width="50px" height="50px"/></span>
+                <h2>Animales Exoticos</h2>
+                <p> contamos con atencion medica para animales exoticos, ya seanaves, reptiles y pequeños mamíferos. Ofrecemos cuidado medico 24h, costumbres y alimentación para prevenir enfermedades. Si necesitas atención para tu mascota exótica en cualquier momento o lugar, estamos para ayudarte!
+                    </p>
+                <a href="#"><button class="btn">Más info</button></a>
+            </article2>
+            <article2>
+                <span class="ico"><img src="./img/veterinario.png" width="50px" height="50px"/>
+                  </span>
+                <h2>Clinica veterinaria</h2>
+                <p> También contamos con una clínica veterinaria para socios donde cuidamos y atendemos a tus amigos peludos. Ven y descubre una amplia variedad de productos y servicios para cuidar a tus mascotas, tenemos consultas telefonicas, nuestros establecimientos estan ubicados en toda la ciudad, cuenta con nosotros! </p>
+                <a href="#"><button class="btn">Más info</button></a>
+            </article2>
+            <article2>
+                <span class="ipco"> <span class="ico"><img src="./img/cuidado-animal.png" width="50px" height="50px"/></span>
+                <h2>Refugio</h2>
+                <p>Contamos con un Refugio donde brindamos hogar a animales necesitados, todas las compras de la pagina nos ayudan a bridar una mejor calidad de vida  estos maravillosos seres!!, no olvides visitar nuestras instalaciones abiertas para encontrar a tu nuevo mejor amigo, podras ver fotos de todos en nuestras redes</p>
+                <a href="#"><button class="btn">Más info</button></a>
+            </article2>
+            <article2>
+                <span class="ipco"> <span class="ico"><img src="./img/amor.png" width="50px" height="50px"/></span>
+                <h2>pet-friendly</h2>
+                <p>Todos nuestros locales son pet-friendly, donde las colas moviéndose y los compañeros ronroneando siempre son recibidos con los brazos abiertos. Ya sea que estés buscando comida premium para mascotas, camas acogedoras o juguetes adorables¡Ven y deja que tus amigos peludos exploren!!</p>
+                <a href="#"><button class="btn">Más info</button></a>
+            </article2>
+
+        </section>
+
+        <section class="container">
+
+            <article>
+                <h2>Visita nuestros productos!!</h2>
+                
+            </article>
+            
+        </section>
+
+        <section class="colums container">
+            <article2>
+                <h2>Terminos de servicio</h2>
+                <p>Al acceder y utilizar nuestro sitio web, aceptas cumplir con nuestros términos de servicio. Estos establecen las reglas, limitaciones de responsabilidad y derechos de propiedad. Por favor, léelos detenidamente antes de continuar. </p>
+            </article2>
+            <article2>
+                <h2>@MagicPetPalace</h2>
+                <p>No olvides visitar nuestras redes sociales para mantenerte al día con las últimas novedades, promociones y consejos para el cuidado de tus mascotas. Síguenos en Facebook, Instagram y Twitter para estar conectado con nuestra comunidad de amantes de los animales.</p>
+            </article2>
+          
+        </section>
+
+    </main>
+
+    <footer>
+    <element class="hero">
+       <h5>Lucia Ferreira Ramos</h5> 
+    </footer>
+    
+    <script>
+        // Menú Lateral:
+        let nav = document.querySelector('nav');
+        let burguerIco = document.querySelector('.burger-ico');
+        let shadow = document.querySelector('.shadow');
+
+        let menuToggle = () => {
+
+            nav.classList.toggle('show-menu');
+            burguerIco.classList.toggle('burger-active');
+            shadow.classList.toggle('shadow-active');
+
+        };
+
+        burguerIco.addEventListener('click', menuToggle);
+        shadow.addEventListener('click', menuToggle);
+
+        // Cambiador de Modo Claro a Oscuro:
+        let darkBtn = document.querySelector('.dark-btn');
+        let body = document.body;
+
+        darkBtn.addEventListener('click', () => {
+
+            body.classList.toggle('dark-mode');
+            darkBtn.classList.toggle('dark-btn-active')
+ 
+        });
+
+    </script>
+</body>
+</html>

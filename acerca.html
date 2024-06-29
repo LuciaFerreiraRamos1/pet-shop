@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Palace</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo"><img id="logo" src="./img/perro.png"  width="50" height="50"/></a> 
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acerca.html" class="active">Nosotros</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <span class="burger-ico">&#9776;</span>
+        </div>
+
+
+
+    </header>
+    <main>
+        <section id="hero">
+<img src="https://st4.depositphotos.com/1606449/25349/i/450/depositphotos_253492448-stock-photo-kitten-and-puppy-hanging-over.jpg" alt="imagen banner">
+          
+             <!--video src="https://v.ftcdn.net/03/98/67/41/700_F_398674151_iTkvza9UDvOITygMZmAxRFK0G4IRkeOI_ST.mp4" autoplay muted loop></video--> 
+
+                <div class="hero-fill">
+                    <div class="hero-text">
+                        <h1>Te contamos quienes somos...</h1>
+                        <p>Somos una empresa dedicada al cuidado de tu mascota, brindando la mas alta calidad en: </p>
+                        <p>¡Alimentos de alta calidad para una nutrición completa y saludable.</p>
+
+                        <p>Accesorios divertidos, juguetes, collares, correas, camas y más.
+                               <p>Productos de higiene, shampoos, cepillos, desparasitantes y más.</p> 
+                               <p> Medicamentos y suplemento para mantener a tu mascota sana y fuerte.</p>
+                            
+                               <p>Tenemos envío rápido y seguro a todo el país. </p>
+                            
+                            <p> y promociones exclusivas.
+                            
+                            Atención al cliente personalizada.
+                            
+                            ¡Visita nuestra tienda online y descubre todo lo que tenemos para tu mascota!
+                        </p>
+                        <a href="contacto.html"><button class="btn btn-blanco">Contactanos</button></a>
+                    </div>
+                </div>
+
+        </section>
+
+
+
+      
+    </main>
+
+       
+    
+
+    <footer></footer>
+    
+    
+    <script>
+        // Menú Lateral:
+        let nav = document.querySelector('nav');
+        let burguerIco = document.querySelector('.burger-ico');
+        let shadow = document.querySelector('.shadow');
+
+        let menuToggle = () => {
+
+            nav.classList.toggle('show-menu');
+            burguerIco.classList.toggle('burger-active');
+            shadow.classList.toggle('shadow-active');
+
+        };
+
+        burguerIco.addEventListener('click', menuToggle);
+        shadow.addEventListener('click', menuToggle);
+
+        // Cambiador de Modo Claro a Oscuro:
+        let darkBtn = document.querySelector('.dark-btn');
+        let body = document.body;
+
+        darkBtn.addEventListener('click', () => {
+
+            body.classList.toggle('dark-mode');
+            darkBtn.classList.toggle('dark-btn-active')
+ 
+        });
+
+    </script>
+</body>
+</html>

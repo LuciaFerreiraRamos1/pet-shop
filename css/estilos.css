@@ -1,0 +1,408 @@
+/* Ajustes generales */
+
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    font-family: "REM";
+    color: #6d6353;
+    overflow-x: hidden;
+    transition: all .4s;
+    background: rgba(212, 211, 211, .9) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB9JREFUGFdjZEAFxoxIfGMGBoazMAEwByQJEoBzQAIAT64DOBO4uTsAAAAASUVORK5CYII=);
+}
+
+.container {
+    width: 84%;
+    max-width: 1096px;
+    margin: 0 auto;
+}
+
+/* Modo Oscuro */
+
+.dark-btn {
+    height: 20px;
+    width: 20px;
+    background: url(../img/icons/moon.svg) no-repeat center;
+    cursor: pointer;
+}
+
+.dark-btn-active {
+    background: url(../img/icons/sun.svg) no-repeat center;
+}
+
+.dark-mode {
+    background: rgba(0, 0, 0, 0.9) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAB9JREFUGFdjZEAFxoxIfGMGBoazMAEwByQJEoBzQAIAT64DOBO4uTsAAAAASUVORK5CYII=);
+    color: #d4d3d3;
+}
+
+.dark-mode header {
+    background: #404040;
+    color: #d4d3d3;
+}
+
+.dark-mode article {
+    border: 1px solid #787878;
+    background: #303030;
+    color: #d4d3d3;
+}
+
+.dark-mode a,
+.dark-mode p,
+.dark-mode h2,
+.dark-mode #logo {
+    color: #d4d3d3;
+}
+
+
+/* Usamos "height: 100%" en los selectores html y body, junto con "display: grid" y "grid-template-rows: auto 1fr", aplicados al selector "body", para fijar el footer al borde inferior de la ventana del navegador. */
+
+/* Ajustes en la tipografía */
+
+h1 {
+    font-size: clamp(30px, 2.7vw, 2.8vw);
+    color: #fff;
+    margin: .5rem 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: #312b3a;
+    margin: 1rem 0;
+}
+
+p {
+    color: #504f4f;
+}
+
+
+/* Header */
+
+header {
+    min-height: 90px;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background: #bcdeee;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, .4);
+}
+
+#logo {
+    text-decoration: none;
+    color: #232324;
+    font-size: 38px;
+    font-weight: 600;
+  
+    
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 16px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6976a7;
+    transition: all .4s;
+    font-weight: 500;
+}
+
+nav a:hover,
+.active {
+    color: #273068;
+}
+
+
+.burger-ico {
+    display: none;
+}
+
+
+/* Sección del héroe (hero section) */
+
+#hero {
+    position: relative;
+}
+hero .h5{
+color:#ededff;
+}
+
+
+#hero img,
+#hero video {
+    width: clamp(900px, 100%, 100%);
+    display: block;
+}
+
+#hero .hero-fill {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background: rgba(38, 51, 110, 0.6) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAABxJREFUGFdjZGBgMGZgYDjLAAWMMAY2AbBKDBUAUIYCBfSSH+MAAAAASUVORK5CYII=) repeat;
+    display: grid;
+    place-items: center;
+}
+
+#hero .hero-text {
+    width: clamp(450px, 40%, 40%);
+    text-align: center;
+    margin: auto;
+    padding-left:20px;
+}
+
+#hero .hero-text p {
+    color: #d4d3d3;
+    font-size: 1.3rem;
+}
+
+main {
+    display: grid;
+    gap: 16px;
+}
+
+.ico {
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    background: #cee4ee;
+    display: inline-grid;
+    place-items: center;
+    color: #d8dde7;
+    font-size: 30px;
+}
+
+.ico svg {
+    width: 52px;
+}
+
+/* Columnas: En este caso usamos auto-fit en lugar de especificar el número de columnas, crea columnas automaticas teniendo en cuenta el numero de hijos que hay dentro del contenedor donde se aplica. Si usamos auto-fit es obligatorio establecer un minmax en lugar de simplemente poner el ancho */
+
+.colums {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* "display: grid" y "grid-template-columns: 1fr 1fr 1fr", se usan para subdividir el espacio horizontal en tres columnas del mismo ancho (1 fracción del espacio horizontal disponible). Para no crear un código tan reiterativo, y sobre todo si hay muchas columnas, esto se puede expresar también de esta manera: "grid-template-columns: repeat(3, 1fr)"*/
+
+article {
+    background: #ffffff;
+    padding: 24px;
+    text-align: center;
+    border-radius: 30px;
+    max-height: 450px;
+    hyphens: auto;
+
+}
+
+article .h2 {
+    background: #b0cfdd !important;
+
+}
+article2 {
+    background: #b8d8e7;
+    padding: 24px;
+    text-align: center;
+    border-radius: 30px;
+    max-height: 450px;
+    hyphens: auto;
+
+}
+
+footer {
+    background-color: #669772;
+    min-height: 96px;
+    margin: 16px 0 0 0;
+}
+
+/*  Botonería  */
+.btn {
+    background-color: #79a379;
+    color: #fff;
+    padding: .9rem 1.61rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    letter-spacing: .08rem;
+    margin: 1.61rem 1rem 1rem 0;
+    transition: all .3s;
+    border: none;
+    font: .86rem "REM";
+    font-weight: 600;
+    align-self: baseline;
+}
+
+.btn:hover {
+    background-color: #67884e;
+    color: #fff
+}
+
+.btn:active {
+    box-shadow: 0 0 0 9px rgba(0, 0, 0, .04), 0 0 0 9px rgba(0, 0, 0, .04), 0 0 0 9px rgba(0, 0, 0, .04), 0 0 0 9px rgba(0, 0, 0, .04);
+}
+
+.btn-blanco {
+    background: #fff;
+    color: #6394d4
+}
+
+.btn-blanco:hover {
+    background: #a9eeea;
+    color: #fff
+}
+
+/* Media queries */
+
+@media (max-width: 1096px) {
+
+    .container {
+        width: 94%;
+        align-items: center;
+    }
+}
+
+@media (max-width: 800px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .colums {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        min-height: 54px;
+    }
+
+    .burger-ico {
+        color: #fff;
+        display: block;
+        cursor: pointer;
+        font-weight: 800;
+        font-size: 20px;
+        background: #81abd3;
+        z-index: 9;
+        transition: all .4s;
+        height: 40px;
+        width: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        padding: 0 1.5px 3px 1.5px;
+    }
+
+    .burger-active {
+        transform: rotate(-90deg);
+    }
+
+    .shadow {
+        transition: all .4s;
+        background: rgba(134, 168, 216, 0.87);
+    }
+
+    .shadow-active {
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .8);
+        z-index: 7;
+    }
+
+    nav {
+        position: fixed;
+        right: -300px;
+        width: 300px;
+        background: #4b77a0;
+        height: 100%;
+        top: 0;
+        transition: all .4s;
+        z-index: 8;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 82px 22px;
+    }
+
+    nav ul li {
+        padding: 12px 0;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+
+    .show-menu {
+        transform: translateX(-300px);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9dcff0;
+}
+
+form {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fffafa;
+    padding-top: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #7ca37c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
